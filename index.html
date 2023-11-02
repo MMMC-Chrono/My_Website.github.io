@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/ba7f655f8f.js" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage | Home</title>
+    </head>
+    <body>
+        <img id="cover_photo" src="./img/cover_photo_homepage.jpg" alt="background">
+        <h1>Hello there!</h1>
+        <div id="page">
+            <main>
+                <div id="back">
+                    <img id="profile" src="./img/profile.jpg" alt="profile picture">
+                    <div id="intro">
+                        <p>I'm <strong>Chrono</strong> and you've just landed on <strong>my Homepage</strong>, which is also my project for CS50x's problem set 8.</p>
+                        <p><strong>Here</strong>, you'll <strong>discover</strong> more about <strong>my projects, hobbies</strong> and <strong>activities</strong>.</p>
+                        <p id="sm">* If you are as passionate about Web Development as I am, let's collaborate and create something extraordinary together!</p>
+                    </div>
+                </div>
+            </main>
+            <div id="sections" class="d-flex justify-content-around align-items-center">
+                <a href="./portfolio.html" target="_blank">
+                    <p class="titles">Portfolio</p>
+                    <img src="./img/Portfolio.jpeg" alt="Portfolio">
+                </a>
+                <a href="./hobby.html" target="_blank">
+                    <p class="titles">Hobbies</p>
+                    <img src="./img/Hobby.jpg" alt="Hobbies">
+                </a>
+                <a href="./activity.html" target="_blank">
+                    <p class="titles">Activities</p>
+                    <img src="./img/Activity.jpg" alt="Activities">
+                </a>
+            </div>
+            <footer>
+                <p>Feel free to reach out to me via:</p>
+                <div id="contact">
+                    <a href="mailto:“maymyamyacin@gmail.com?" target="_blank">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>maymyamyacin@gmail.com</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/chrono-cin/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <p>Chrono Cin</p>
+                    </a>
+                    <a href="https://github.com/MMMC-Chrono" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                        <p>MMMC-Chrono</p>
+                    </a>
+                </div>
+            </footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script>
+
+            function selector(element) {
+                const el = document.querySelector(element)
+                if (el) return el;
+            }
+            window.addEventListener('scroll', function(event) {
+                const cover = selector('#cover_photo');
+                const main = selector('main');
+                const hello = selector('h1');
+                console.log(this.scrollY)
+                if (this.scrollY >= 200) {
+                    cover.style.filter = "blur(5px)";
+                    cover.style.opacity = "0%";
+                    cover.style.transition = 'all 3s';
+                    main.style.opacity = "100%";
+                    main.style.transition = 'all 3s';
+                    hello.style.opacity = '0%';
+                    hello.style.transition = 'all 2s';
+                }
+                else
+                {
+                    cover.style.filter = "blur(0px)";
+                    cover.style.transition = 'all 3s';
+                    main.style.opacity = "0%";
+                    main.style.transition = 'all 3s';
+                    hello.style.opacity = '100%';
+                    hello.style.transition = 'all 2s';
+                }
+                if (this.scrollY >= 1000) {
+                    cover.style.opacity = "0%";
+                }
+                else
+                {
+                    cover.style.opacity = "100%";
+                }
+            })
+        </script>
+    </body>
+</html>
