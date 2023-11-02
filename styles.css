@@ -44,8 +44,9 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: "Lucida Handwriting", "Brush Script MT";
+    font-family: "Brush Script MT";
 }
+/* "Lucida Handwriting",  */
 
 #page {
     display: flex;
