@@ -1,4 +1,6 @@
-
+/* change font size. it is too small */
+/* redesign footer and add final project link video */
+@import url("https://fonts.googleapis.com/css?family=Lucida+Handwriting");
 
 * {
     margin: 0;
@@ -42,7 +44,7 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: "Lucida Handwriting";
+    font-family: "Lucida Handwriting", "Brush Script MT";
 }
 
 #page {
