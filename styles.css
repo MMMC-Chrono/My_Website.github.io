@@ -1,0 +1,333 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-size-xsm: 1rem;
+    --font-size-sm: 1.25rem;
+    --font-size-md: 1.7rem;
+    --font-size-lg: 2rem;
+    --font-size-xl: 2.3rem;
+    --dark-blue: #2d5986;
+    --light-blue: #6699cc;
+    --sky-blue: #004080;
+    --light-sky-blue: #ebf3fc;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    font-size: 62.5%;
+    color: white;
+    font-family: Monospace;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#cover_photo {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+h1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Lucida Handwriting";
+}
+
+#page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+main {
+    text-align: center;
+}
+
+#back {
+    margin: auto;
+    margin-bottom: 6rem;
+    padding: 1rem 1.5rem;
+    width: 85%;
+    border-radius: 1rem;
+    background-color: rgba(250, 250, 250, 0.6);
+    color: var(--light-blue);
+    box-shadow: 0rem 0.2rem 0.7rem rgba(45, 89, 134, 0.25);
+}
+
+strong {
+    color: var(--dark-blue);
+}
+
+#sm {
+    font-size: 1.05rem;
+    color: var(--dark-blue);
+}
+
+#profile {
+    border-radius: 50%;
+    width: 8rem;
+    box-shadow: 0rem 0.1rem 0.7rem rgba(45, 89, 134, 0.25);
+}
+
+#sections {
+    width: 100%;
+    display: flex;
+    margin-bottom: 3rem;
+    flex-direction: column;
+}
+
+#sections a {
+    position: relative;
+}
+
+#sections img {
+    width: 23rem;
+    height: 7rem;
+    margin: 1rem;
+    opacity: 70%;
+    filter: blur(2px);
+    transition: all 1s
+}
+
+#sections img:hover {
+    opacity: 100%;
+    box-shadow: 0rem 0.2rem 0.7rem rgba(25, 51, 77, 0.5);
+    transform: scale( 1.05, 1.05);
+    filter: blur(0px);
+    transition: all 1s;
+}
+
+.titles {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--font-size-sm);
+    z-index: 10;
+    padding: 0 0.5rem;
+}
+
+footer {
+    font-size: var(--font-size-xsm);
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    background-color: var(--sky-blue);
+    color: white;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+#contact a{
+    display: flex;
+    flex-direction: row;
+    color: var(--light-blue);
+    transition: all 1s;
+}
+
+a {
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: white;
+    transform: scale(1.03);
+    transition: all 1s;
+}
+
+#contact i {
+    color: white;
+    margin-right: 1rem;
+    font-size: var(--font-size-sm);
+}
+
+/* Portfolio */
+#portfolio, #hobby, #pursuit {
+    color: black;
+    flex-direction: column;
+}
+
+#portfolio {
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#welcome {
+    font-family: "Lucida Handwriting";
+    color: var(--sky-blue);
+}
+
+.navbar {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    box-shadow: 0px 0.01rem 0.2rem gray;
+    background-color: var(--light-sky-blue);
+    z-index: 10;
+}
+
+.nav_gap {
+    margin-top: 4rem;
+}
+
+#ielts, #badminton {
+    max-width: 30rem;
+}
+
+.card {
+    width: 90%;
+    margin: 1rem auto;
+}
+
+#scroll_spy {
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    z-index: 10;
+}
+
+.spy {
+    width: 3rem;
+}
+
+.spy:hover {
+    background-color: var(--light-sky-blue);
+}
+
+#cafe_text {
+    width: 100%;
+}
+
+/* Hobby */
+#hobby, #pursuit {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hobby_title {
+    background-color: var(--light-sky-blue);
+}
+
+#artGallery {
+    border: 0.05rem solid #e3e3e3;
+    border-radius: 0.5rem;
+}
+
+.carousel-item img {
+    width: 10rem;
+    height: 30rem;
+    object-fit: contain;
+}
+
+/* Pursuit */
+
+@media screen and (min-width: 400px) {
+
+    #sections {
+        padding: 3rem 0;
+    }
+}
+
+@media screen and (min-width: 700px) {
+
+    body {
+        font-size: var(--font-size-sm);
+    }
+
+    #back {
+        margin: auto;
+        margin-bottom: 15rem;
+        padding: 2rem;
+    }
+
+    #sections {
+        margin-bottom: 7rem;
+    }
+
+    #profile {
+        width: 10rem;
+    }
+
+    #sm {
+        font-size: var(--font-size-xsm);
+    }
+
+    #sections {
+        flex-direction: row;
+    }
+
+    #sections img {
+        width: 10rem;
+        height: 25rem;
+        opacity: 70%;
+    }
+
+    #contact {
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-evenly;
+        margin-top: 1.5rem;
+    }
+
+    #contact a{
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    #back {
+        padding: 3rem;
+    }
+
+    #sections img {
+        width: 15rem;
+        height: 25rem;
+        opacity: 70%;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    main {
+        width: 70%;
+    }
+
+    #back {
+        padding: 4rem;
+    }
+
+    #sections img {
+        width: 20rem;
+        height: 25rem;
+        opacity: 70%;
+    }
+}
