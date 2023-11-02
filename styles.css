@@ -23,9 +23,14 @@
 body {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    font-size: 62.5%;
+    font-size:var(--font-size-xsm);
     color: white;
-    font-family: Monospace;
+    font-family: Monospace, "Courier New", Georgia, Arial;
+}
+
+#sm {
+    font-size: 0.8rem;
+    color: var(--dark-blue)
 }
 
 body::-webkit-scrollbar {
@@ -39,14 +44,15 @@ body::-webkit-scrollbar {
     z-index: -1;
 }
 
-h1 {
+#greet {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: "Brush Script MT";
+    align-items: center;
+    text-align: center;
+    font-family: "Lucida Handwriting", Monospace, "Courier New", Georgia, Arial;
 }
-/* "Lucida Handwriting",  */
 
 #page {
     display: flex;
@@ -78,15 +84,11 @@ strong {
     color: var(--dark-blue);
 }
 
-#sm {
-    font-size: 1.05rem;
-    color: var(--dark-blue);
-}
-
 #profile {
     border-radius: 50%;
     width: 8rem;
     box-shadow: 0rem 0.1rem 0.7rem rgba(45, 89, 134, 0.25);
+    margin: 1rem 0;
 }
 
 #sections {
@@ -220,6 +222,10 @@ a {
 
 .spy:hover {
     background-color: var(--light-sky-blue);
+}
+
+iframe {
+    min-height: 20rem;
 }
 
 #cafe_text {

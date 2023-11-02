@@ -10,7 +10,10 @@
     </head>
     <body>
         <img id="cover_photo" src="./img/cover_photo_homepage.jpg" alt="background">
-        <h1>Hello there!</h1>
+        <div id="greet">
+            <h1>Hello there!</h1>
+            <i class="fa-solid fa-angles-down fa-fade" style="color: #f5fbff;"></i>
+        </div>
         <div id="page">
             <main>
                 <div id="back">
@@ -65,7 +68,7 @@
             window.addEventListener('scroll', function(event) {
                 const cover = selector('#cover_photo');
                 const main = selector('main');
-                const hello = selector('h1');
+                const hello = selector('#greet');
                 console.log(this.scrollY)
                 if (this.scrollY >= 200) {
                     cover.style.filter = "blur(5px)";
