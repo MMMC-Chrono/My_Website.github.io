@@ -205,6 +205,10 @@ a {
     margin: 1rem auto;
 }
 
+.nav_gap {
+    margin-top: 4rem;
+}
+
 #scroll_spy {
     position: fixed;
     display: flex;
