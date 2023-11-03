@@ -133,7 +133,7 @@ strong {
 footer {
     font-size: var(--font-size-xsm);
     width: 100%;
-    padding: 1rem;
+    padding: 2rem 1.5rem;
     text-align: left;
     background-color: var(--sky-blue);
     color: white;
@@ -150,7 +150,7 @@ footer {
     display: flex;
     flex-direction: row;
     color: var(--light-blue);
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 a {
@@ -160,7 +160,7 @@ a {
 #contact a:hover {
     color: white;
     transform: scale(1.03);
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 #contact i {
@@ -196,10 +196,6 @@ a {
     z-index: 10;
 }
 
-.nav_gap {
-    margin-top: 4rem;
-}
-
 #ielts, #badminton {
     max-width: 30rem;
 }
@@ -211,9 +207,16 @@ a {
 
 #scroll_spy {
     position: fixed;
+    display: flex;
+    text-align: center;
+    align-items: center;
     right: 1%;
     bottom: 1%;
     z-index: 10;
+}
+
+.invi {
+    padding-bottom: 3rem;
 }
 
 .spy {
