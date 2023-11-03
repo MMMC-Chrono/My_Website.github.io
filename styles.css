@@ -10,7 +10,7 @@
 
 :root {
     --font-size-xsm: 1rem;
-    --font-size-sm: 1.25rem;
+    --font-size-sm: 1.1rem;
     --font-size-md: 1.7rem;
     --font-size-lg: 2rem;
     --font-size-xl: 2.3rem;
@@ -23,7 +23,7 @@
 body {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    font-size:var(--font-size-xsm);
+    font-size: var(--font-size-xsm);
     color: white;
     font-family: Monospace, "Courier New", Georgia, Arial;
 }
@@ -272,10 +272,6 @@ iframe {
 
 @media screen and (min-width: 700px) {
 
-    body {
-        font-size: var(--font-size-sm);
-    }
-
     #back {
         margin: auto;
         margin-bottom: 15rem;
@@ -332,6 +328,10 @@ iframe {
 }
 
 @media screen and (min-width: 1200px) {
+
+    body, footer {
+        font-size: var(--font-size-sm);
+    }
 
     main {
         width: 70%;
