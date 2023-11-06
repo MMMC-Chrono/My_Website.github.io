@@ -26,15 +26,15 @@
                 </div>
             </main>
             <div id="sections" class="d-flex justify-content-around align-items-center">
-                <a href="./portfolio.html" target="_blank">
+                <a id="t1" href="./portfolio.html" target="_blank">
                     <p class="titles">Portfolio</p>
                     <img src="./img/Portfolio.jpeg" alt="Portfolio">
                 </a>
-                <a href="./hobby.html" target="_blank">
+                <a id="t2" href="./hobby.html" target="_blank">
                     <p class="titles">Hobbies</p>
                     <img src="./img/Hobby.jpg" alt="Hobbies">
                 </a>
-                <a href="./activity.html" target="_blank">
+                <a id="t3" href="./activity.html" target="_blank">
                     <p class="titles">Activities</p>
                     <img src="./img/Activity.jpg" alt="Activities">
                 </a>
@@ -69,13 +69,16 @@
                 const cover = selector('#cover_photo');
                 const main = selector('main');
                 const hello = selector('#greet');
+                const t1 = selector('#t1')
+                const t2 = selector('#t2')
+                const t3 = selector('#t3')
                 console.log(this.scrollY)
                 if (this.scrollY >= 200) {
                     cover.style.filter = "blur(5px)";
                     cover.style.opacity = "0%";
                     cover.style.transition = 'all 3s';
                     main.style.opacity = "100%";
-                    main.style.transition = 'all 3s';
+                    main.style.transition = 'all 1s';
                     hello.style.opacity = '0%';
                     hello.style.transition = 'all 2s';
                 }
@@ -88,12 +91,36 @@
                     hello.style.opacity = '100%';
                     hello.style.transition = 'all 2s';
                 }
-                if (this.scrollY >= 1000) {
+                if (this.scrollY >= 800) {
                     cover.style.opacity = "0%";
                 }
                 else
                 {
                     cover.style.opacity = "100%";
+                }
+
+                if (this.scrollY < 790) {
+                    t1.style.transform = "translate(10%, 50%)"
+                    t2.style.transform = "translate(10%, 50%)"
+                    t3.style.transform = "translate(10%, 50%)"
+                    t1.style.transition = "all .5s"
+                    t2.style.transition = "all .5s"
+                    t3.style.transition = "all .5s"
+                    t1.style.opacity = "0"
+                    t2.style.opacity = "0"
+                    t3.style.opacity = "0"
+                } 
+                else
+                {
+                    t1.style.transform = "translate(0%, 0%)"
+                    t2.style.transform = "translate(0%, 0%)"
+                    t3.style.transform = "translate(0%, 0%)"
+                    t1.style.transition = "all .8s"
+                    t2.style.transition = "all 1s"
+                    t3.style.transition = "all 1.2s"
+                    t1.style.opacity = "1"
+                    t2.style.opacity = "1"
+                    t3.style.opacity = "1"
                 }
             })
         </script>
